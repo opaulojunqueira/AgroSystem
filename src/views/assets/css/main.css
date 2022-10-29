@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Sans+Pro&display=swap');
+
+.bg-color {
+    background-color: #197E00;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+}
+
+/* Coluna */
+.container {
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #197E00;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .row .col {
+    padding: 8px 25px;
+}
+
+/* Card */
+.container-cards {
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 2px 5px 5px rgb(98, 98, 98);
+}
