@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 const agroNewsRSS = require('./modules/agroNews/rss');
+const agroNewsFeed = require('./modules/agroNews/feed');
 
 const app = express();
 app.use(cors())
@@ -25,6 +26,15 @@ app.get('/', async function (req, res) {
 
     // res.json(agroNews)
     res.render(__dirname + '/views/home/home.handlebars', await agroNews);
+});
+
+app.get('/agronegocio', async function (req, res) {
+    let agroNews = await agroNewsRSS()
+    let feedHTML = await (await agroNewsFeed())
+
+
+    // res.render(__dirname + '/views/agronegocio/agro.handlebars', await feedHTML);
+    res.send(feedHTML)
 });
 
 // app.use((req, res, next) => {
