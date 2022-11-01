@@ -32,9 +32,10 @@ app.get('/agronegocio', async function (req, res) {
     let agroNews = await agroNewsRSS()
     let feedHTML = await (await agroNewsFeed())
 
+    let aa = await feedHTML.toString()
 
-    // res.render(__dirname + '/views/agronegocio/agro.handlebars', await feedHTML);
-    res.send(feedHTML)
+    res.render(__dirname + '/views/agro/agro.handlebars', await aa);
+    // res.send(feedHTML)
 });
 
 // app.use((req, res, next) => {
